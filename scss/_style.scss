@@ -1,0 +1,56 @@
+.section-bg {
+    padding-top: 30px;
+    background-color: $color1;
+    .container-wraper {
+        @media (max-width: 975px) {
+            align-items: center;
+            flex-direction: column;
+        }
+        @include d-flex(flex, space-evenly, inherit);
+        width: 100%;
+        .container {
+            @extend %size;
+            .title {
+                @media(max-width: 550px) {
+                    font-size: 15px;
+                }
+                color: $color2;
+                font-size:25px;
+                font-family:$fontfamily;
+                &::after {
+                    content: '';
+                    width: 45px;
+                    height: 2px;
+                    background-color: $color2;
+                    display: block;
+                    margin: 12px 0;
+                }
+            }
+            .wraper-box {
+                @include d-flex(flex, center, column);
+                @media(max-width: 550px) {
+                    flex-direction: column;
+                }
+                img {
+                    @include size(100%, 450px);
+                    &:hover {
+                        filter: grayscale(100%);
+                    }
+                    @include hovertransition ( all, 2s, linear);
+                }
+                p {
+                    margin-top: $margin01;
+                    margin-bottom: $margin01;
+                    text-align: justify;
+                    @media(max-width: 550px) {
+                        font-size: 8px;
+                    }
+                    @include size(100%, 450px);
+                    font-size:16px;
+                    font-family: $fontfamily;
+                    color: $color2;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@mixin d-flex($display, $justify, $direction) {
+    display: $display;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin hovertransition( $property, $duration, $type) {
+    transition: $property $duration $type;
+}
+
+@mixin size($width, $max-width) {
+    width: $width;
+    max-width: $max-width;
+}
